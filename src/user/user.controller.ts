@@ -8,6 +8,7 @@ export class UserController {
     public getAll() {
         return this.userService.findAll();
     }
+    
     @Get(':id')
     public findById(@Param('id')id: string) {
         return this.userService.findOne(id);

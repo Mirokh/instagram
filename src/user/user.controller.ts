@@ -1,4 +1,6 @@
-import { Controller, Get, Param } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import { CreateUserDto } from './create-user.dto';
+import { userMock } from './user.mock';
 import { UserService } from './user.service';
 
 @Controller('user')
@@ -12,5 +14,12 @@ export class UserController {
     @Get(':id')
     public findById(@Param('id')id: string) {
         return this.userService.findOne(id);
+    }
+
+    @Post()
+    public creatUser(@Body() createUserDto: CreateUserDto) {
+        createUserDto.id = userMock.length + 1;
+        userMock.push(createUserDto);
+        return createUserDto;
     }
 }

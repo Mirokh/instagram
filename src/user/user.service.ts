@@ -14,10 +14,9 @@ export class UserService {
         return userMock.find((user) => user.id === id);
     }
 
-    public findAndDelete(id) {
+    public findAndDelete(id): void {
         const indexOfUser = userMock.map(e => e.id).indexOf(id);
-
-        return userMock.splice(indexOfUser, 1);
+        userMock.splice(indexOfUser, 1);
     }
 
     public create(user: CreateUserDto) {

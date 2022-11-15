@@ -18,8 +18,6 @@ export class UserController {
 
     @Post()
     public creatUser(@Body() createUserDto: CreateUserDto) {
-        createUserDto.id = userMock.length + 1;
-        userMock.push(createUserDto);
-        return createUserDto;
+        return this.userService.create(createUserDto);
     }
 }

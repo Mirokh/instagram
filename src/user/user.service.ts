@@ -8,6 +8,12 @@ export class UserService {
     }
 
     public findOne(id) {
-        return userMock.find((user) => user.id === Number(id))
+        return userMock.find((user) => user.id === id)
+    }
+
+    public findAndDelete(id) {
+        const indexOfUser = userMock.map(e => e.id).indexOf(id);
+
+        return userMock.splice(indexOfUser, 1);
     }
 }

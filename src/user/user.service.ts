@@ -14,6 +14,10 @@ export class UserService {
     return userMock.find((user) => user.id === id);
   }
 
+  public findOneByEmail(email) {
+    return userMock.find((user) => user.email === email);
+  }
+
   public findAndDelete(id): void {
     const indexOfUser = userMock.map((e) => e.id).indexOf(id);
     userMock.splice(indexOfUser, 1);
@@ -27,6 +31,7 @@ export class UserService {
       age: user.age || null,
       email: user.email,
       phoneNumber: user.phoneNumber,
+      password: user.password
     };
     userMock.push(createdUser);
     return user;
@@ -39,6 +44,7 @@ export class UserService {
     findUser.age = user.age || findUser.age;
     findUser.email = user.email || findUser.email;
     findUser.phoneNumber = user.phoneNumber || findUser.phoneNumber;
+    findUser.password = user.password || findUser.password;
 
     return findUser;
   }

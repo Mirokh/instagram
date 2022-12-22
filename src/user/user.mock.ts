@@ -7,6 +7,7 @@ export const userMock: UserInterface[] = [
     lastname: 'Jackson',
     email: 'michael@email.com',
     phoneNumber: '+145698562231',
+    password: 'password1',
   },
   {
     id: 2,
@@ -15,6 +16,7 @@ export const userMock: UserInterface[] = [
     age: 45,
     email: 'john@email.com',
     phoneNumber: '+145698562312',
+    password: 'password1',
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ export const userMock: UserInterface[] = [
     lastname: 'Jackson',
     email: 'alex@email.com',
     phoneNumber: '+145231562231',
+    password: 'password1',
   },
   {
     id: 4,
@@ -29,6 +32,7 @@ export const userMock: UserInterface[] = [
     lastname: 'Miller',
     email: 'tom@email.com',
     phoneNumber: '+145698123123',
+    password: 'password1',
   },
   {
     id: 5,
@@ -37,6 +41,7 @@ export const userMock: UserInterface[] = [
     age: 29,
     email: 'algel@email.com',
     phoneNumber: '+145698562221',
+    password: 'password1',
   },
   {
     id: 6,
@@ -45,5 +50,6 @@ export const userMock: UserInterface[] = [
     age: 21,
     email: 'test@gmail.com',
     phoneNumber: '+3744984654897',
+    password: 'password1',
   },
 ];

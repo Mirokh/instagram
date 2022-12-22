@@ -28,4 +28,8 @@ export class CreateUserDto {
 
   @IsMobilePhone('en-US')
   phoneNumber: string;
+
+  @IsString()
+  @Length(6, 20)
+  password: string
 }

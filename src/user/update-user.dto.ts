@@ -32,4 +32,8 @@ export class UpdateUserDto {
   @IsMobilePhone('en-US')
   @IsOptional()
   phoneNumber?: string;
+  
+  @IsString()
+  @Length(6, 20)
+  password: string
 }

@@ -12,10 +12,6 @@ import { LocalStrategy } from './local.strategy';
   imports: [
     UserModule,
     PassportModule,
-    // JwtModule.register({
-    //   secret: (process.env.SECRET),
-    //   signOptions: { expiresIn: '2h' },
-    // }),
     JwtModule.registerAsync({
       useFactory: (configService: ConfigService) => ({
         secret: configService.get<string>('SECRET'),

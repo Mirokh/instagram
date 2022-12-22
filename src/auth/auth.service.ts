@@ -17,7 +17,7 @@ export class AuthService {
   }
   return null;
   }
-// wtf aranca validateUser-i chi ashxatum
+
   async login(user: any) {
     const payload = { email: user.email, id: user.id };    
     return {
